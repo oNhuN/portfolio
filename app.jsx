@@ -600,7 +600,7 @@ function Contact() {
           <div className="clabel">LinkedIn</div>
           <div className="cv">in/nuno-zhan</div>
         </a>
-        <a href="https://portfolio-nunozhan.vercel.app" target="_blank" rel="noopener noreferrer">
+        <a href="https://drive.google.com/file/d/12sSRxiGWAMb25VwYjfN8Xhw6c68h7jSH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
           <div className="clabel">CV · PDF</div>
           <div className="cv">Download ↓</div>
         </a>
