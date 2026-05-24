@@ -688,6 +688,22 @@ function ScrollSpy() {
     </nav>
   );
 }
+// --- Vercel Web Analytics (served at /_vercel/insights/* on Vercel deploys) ---
+function VercelAnalytics() {
+  useEffect(() => {
+    if (document.querySelector('script[data-vercel-analytics]')) return;
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '/_vercel/insights/script.js';
+    script.setAttribute('data-vercel-analytics', '');
+    document.head.appendChild(script);
+  }, []);
+  return null;
+}
+
 // --- Root ---
 function App() {
   const [lang, setLang] = useState('en');
@@ -702,6 +718,7 @@ function App() {
       <Contact />
       <FooterBar />
       <Tweaks />
+      <VercelAnalytics />
     </>
   );
 }
