@@ -600,7 +600,7 @@ function Contact() {
           <div className="clabel">LinkedIn</div>
           <div className="cv">in/nuno-zhan</div>
         </a>
-        <a href="#" onClick={(e) => { e.preventDefault(); alert('CV PDF goes here. Drop the file into the project and link it.'); }}>
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">
           <div className="clabel">CV · PDF</div>
           <div className="cv">Download ↓</div>
         </a>
