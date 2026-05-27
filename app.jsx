@@ -469,7 +469,7 @@ function Projects() {
       year: '2026 →',
       order: 3,
       title: 'Aerofoil CFD Solver',
-      blurb: '2D incompressible Navier / Stokes around a NACA section, with the goal of pulling clean Cp distributions and a path toward boundary-layer transition modelling. Independent project this summer.',
+      blurb: '2D incompressible Navier / Stokes around a NACA section, with the goal of pulling clean Cp distributions and a path toward boundary-layer transition modelling. Ongoing independent project for Summer 2026.',
       tags: ['CFD', 'NumPy', 'Aerodynamics', 'F1 prep'],
       href: '#',
     },
