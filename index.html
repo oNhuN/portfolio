@@ -11,8 +11,8 @@
 
 <style>
   :root {
-    --bg: #15171f;
-    --bg-2: #1d1f2a;
+    --bg: #000000;
+    --bg-2: #000000;
     --ink: #ece6d6;
     --ink-2: #b9b09b;
     --ink-3: #80796a;
@@ -48,13 +48,11 @@
 
   /* fixed starfield (removed) */
   #starfield { display: none; }
-  /* very subtle background warmth */
+  /* keep background fully black */
   body::before {
     content: "";
     position: fixed; inset: 0;
-    background:
-      radial-gradient(1400px 900px at 15% 0%, rgba(244,162,97,0.06), transparent 60%),
-      radial-gradient(900px 700px at 95% 100%, rgba(142,202,230,0.04), transparent 60%);
+    background: none;
     pointer-events: none;
     z-index: 1;
   }
