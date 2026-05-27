@@ -467,6 +467,7 @@ function Projects() {
   const items = [
     {
       year: '2026 →',
+      sortYear: 2026,
       title: 'Aerofoil CFD Solver',
       blurb: '2D incompressible Navier / Stokes around a NACA section, with the goal of pulling clean Cp distributions and a path toward boundary-layer transition modelling. Independent project this summer.',
       tags: ['CFD', 'NumPy', 'Aerodynamics', 'F1 prep'],
@@ -474,19 +475,21 @@ function Projects() {
     },
     {
       year: '2025',
+      sortYear: 2025,
       title: 'Lab notebooks · year 2',
-      blurb: 'Selected writeups: speed-of-light by Foucault method, electron charge-to-mass ratio, an FFT-based Fraunhofer diffraction analysis. Available on request.',
+      blurb: "Selected writeups: acceleration due to gravity via Kater's and compound pendulums, and the doublet splitting of sodium using a Michelson interferometer. Available on request.",
       tags: ['Lab', 'LaTeX', 'Data analysis'],
       href: '#',
     },
     {
       year: '2024 / 25',
+      sortYear: 2024,
       title: 'Solar System Simulation',
       blurb: "A Python N-body simulation of a chaotic gravitational system. Variable-timestep integrator, energy diagnostics, animation pipeline. The original solver behind the interactive demo above.",
       tags: ['Python', 'N-body', 'Numerical methods', 'matplotlib'],
       href: 'https://github.com/oNhuN/solar-system-simulation',
     },
-  ];
+  ].sort((a, b) => b.sortYear - a.sortYear);
   return (
     <section id="work" ref={ref} className="wrap">
       <SecHead num="03 / 05" label="Projects">
