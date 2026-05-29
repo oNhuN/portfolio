@@ -555,13 +555,12 @@
   .contact h2 em { color: var(--sun); }
   .contact-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
     margin-top: 64px;
     border-top: 1px solid var(--rule);
   }
-  @media (max-width: 1000px) { .contact-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 800px) { .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .contact-grid a {
     padding: 24px 20px;
     border-right: 1px solid var(--rule);
@@ -569,10 +568,15 @@
     display: block;
     transition: background 0.2s;
     position: relative;
+    min-height: 100%;
   }
   .contact-grid a:hover { background: rgba(244, 162, 97, 0.06); }
   .contact-grid a:hover .cv { color: var(--sun); }
   .contact-grid a:last-child { border-right: 0; }
+  @media (max-width: 800px) {
+    .contact-grid a:last-child { border-right: 1px solid var(--rule); }
+    .contact-grid a:nth-child(2n) { border-right: 0; }
+  }
   .contact-grid .clabel {
     font-family: var(--mono); font-size: 11px;
     color: var(--ink-3); letter-spacing: 0.18em;
