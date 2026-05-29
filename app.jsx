@@ -607,8 +607,7 @@ function Contact() {
           <div className="clabel">CV · PDF</div>
           <div className="cv">Open CV ↗</div>
         </a>
-        
-        <a href="/Nuno_Zhan_CV.pdf" download>
+        <a href="/Nuno_Zhan_CV.pdf" download="Nuno_Zhan_CV.pdf">
           <div className="clabel">CV · PDF</div>
           <div className="cv">Download ↓</div>
         </a>
