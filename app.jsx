@@ -603,7 +603,12 @@ function Contact() {
           <div className="clabel">LinkedIn</div>
           <div className="cv">in/nuno-zhan</div>
         </a>
-        <a href="https://drive.google.com/file/d/12sSRxiGWAMb25VwYjfN8Xhw6c68h7jSH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="/Nuno_Zhan_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <div className="clabel">CV · PDF</div>
+          <div className="cv">Open CV ↗</div>
+        </a>
+        
+        <a href="/Nuno_Zhan_CV.pdf" download>
           <div className="clabel">CV · PDF</div>
           <div className="cv">Download ↓</div>
         </a>
