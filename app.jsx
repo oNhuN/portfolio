@@ -967,7 +967,7 @@ function ScrollSpy({ lang }) {
     </nav>
   );
 }
-// --- Vercel Web Analytics (served at /_vercel/insights/* on Vercel deploys) ---
+// --- Vercel Web Analytics + Speed Insights (/_vercel/* on Vercel deploys only) ---
 function VercelAnalytics() {
   useEffect(() => {
     if (document.querySelector('script[data-vercel-analytics]')) return;
@@ -978,6 +978,21 @@ function VercelAnalytics() {
     script.defer = true;
     script.src = '/_vercel/insights/script.js';
     script.setAttribute('data-vercel-analytics', '');
+    document.head.appendChild(script);
+  }, []);
+  return null;
+}
+
+function VercelSpeedInsights() {
+  useEffect(() => {
+    if (document.querySelector('script[data-vercel-speed-insights]')) return;
+    window.si = window.si || function () {
+      (window.siq = window.siq || []).push(arguments);
+    };
+    const script = document.createElement('script');
+    script.defer = true;
+    script.src = '/_vercel/speed-insights/script.js';
+    script.setAttribute('data-vercel-speed-insights', '');
     document.head.appendChild(script);
   }, []);
   return null;
@@ -1012,6 +1027,7 @@ function App() {
       <FooterBar lang={lang} />
       <Tweaks />
       <VercelAnalytics />
+      <VercelSpeedInsights />
     </>
   );
 }
